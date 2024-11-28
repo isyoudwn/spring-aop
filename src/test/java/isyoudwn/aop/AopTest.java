@@ -7,6 +7,7 @@ import isyoudwn.aop.order.aop.AspectV1;
 import isyoudwn.aop.order.aop.AspectV2;
 import isyoudwn.aop.order.aop.AspectV3;
 import isyoudwn.aop.order.aop.AspectV4;
+import isyoudwn.aop.order.aop.AspectV5;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ import org.springframework.context.annotation.Import;
 
 @Slf4j
 @SpringBootTest
-@Import(AspectV4.class)
+@Import({AspectV5.TxAspect.class, AspectV5.LogAspect.class})
 public class AopTest {
 
     @Autowired
